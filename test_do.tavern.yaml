@@ -1,0 +1,11 @@
+test_name: Starwars API Status
+
+stages: 
+  - name: API is operational
+    request:
+      url: https://swapi.co/api/planets/
+      method: GET
+    response:
+      status_code: 200
+      body:
+        count: 61
