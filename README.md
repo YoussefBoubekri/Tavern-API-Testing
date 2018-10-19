@@ -9,9 +9,10 @@ tavern
 pytest
 
 ## run tests:
+test specs file needs to be prefixed with 'test_'*
 ```python
-pytest [Test_specs.yaml]
+pytest test_status.tavern
 
 #get results in xml format
 
-py.test --junitxml results.xml [Test_specs.yaml]
+py.test --junitxml results.xml test_status.tavern
