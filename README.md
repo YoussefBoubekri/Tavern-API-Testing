@@ -9,10 +9,10 @@ tavern
 pytest
 
 ## run tests:
-test specs file needs to be prefixed with 'test_'*
+test specs file needs to be prefixed with 'test_'*.yaml
 ```python
-pytest test_status.tavern
+pytest test_status.tavern.yaml
 
-#get results in xml format
+#to store results in xml JUnit format
 
-py.test --junitxml results.xml test_status.tavern
+py.test --junitxml results.xml test_status.tavern.yaml
