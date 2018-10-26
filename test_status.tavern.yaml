@@ -9,3 +9,37 @@ stages:
       status_code: 200
       body:
         count: 61
+
+test_name: errors
+
+stages:
+  - name: error planet not found
+    request: 
+      url: https://swapi.co/api/planets/999
+      method: GET
+    response:
+      status_code: 301
+
+test_name: people endpoint
+
+stages:
+  - name: API is operational
+    request: 
+      url: https://swapi.co/api/people/
+      method: GET
+    response:
+      status_code: 200
+      body:
+        count: 87
+
+test_name: looking for skywalker
+
+stages:
+  - name: API is operational
+    request: 
+      url: https://swapi.co/api/people/
+      method: GET
+    response:
+      status_code: 200
+      body:
+        results.0.name: 'Luke Skywalker'
